@@ -1,50 +1,39 @@
-import videoHero2 from "../assets/videos/videoHero2.mp4";
-import videoHero1 from "../assets/videos/videoHero1.mp4";
+import content from "../data/content.json";
+
 const Hero = () => {
+  const { heading, description, buttons, videos, styles } = content.hero;
+
   return (
-    <div className="flex flex-col items-center mt-6">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        Build with Blockchain
-        <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
+    <div className={styles.container}>
+      <h1 className={styles.heading}>
+        {heading.mainText}
+        <span className={heading.highlightedStyle}>
           {" "}
-          Development Tools
+          {heading.highlightedText}
         </span>
       </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        Empower your creativity and bring your blockchain app ideas to life with
-        our intuitive development tools. Get started today and turn your vision
-        into a decentralized reality!
-      </p>
-      <div className="flex justify-center my-10">
+      <p className={styles.description}>{description}</p>
+      <div className={styles.buttonContainer}>
         <a
-          href="#"
-          className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
+          href={buttons.startForFree.href}
+          className={buttons.startForFree.style}
         >
-          Start for free
+          {buttons.startForFree.label}
         </a>
-        <a href="#" className="py-2 px-3 border mx-3 rounded-md">
-          Documentation
+        <a
+          href={buttons.documentation.href}
+          className={buttons.documentation.style}
+        >
+          {buttons.documentation.label}
         </a>
       </div>
-      <div className="flex justify-center mt-10">
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-orange-700 mx-2 my-4"
-        >
-          <source src={videoHero2} type="video/mp4" />
-          Your Browser doesn't support the video Tag
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-orange-700 mx-2 my-4"
-        >
-          <source src={videoHero1} type="video/mp4" />
-          Your Browser doesn't support the video Tag
-        </video>
+      <div className={styles.videoContainer}>
+        {videos.map((video, index) => (
+          <video key={index} autoPlay loop muted className={video.style}>
+            <source src={video.src} type={video.type} />
+            Your Browser doesn't support the video tag.
+          </video>
+        ))}
       </div>
     </div>
   );

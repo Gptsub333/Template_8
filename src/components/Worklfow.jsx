@@ -1,39 +1,38 @@
 import { CheckCircle2 } from "lucide-react";
+import content from "../data/content.json";
 
-import bitcoin from "../assets/bitcoin.png";
-import { checklistItems } from "../constants";
-const Worklfow = () => {
+const Workflow = () => {
+  const { heading, image, checklistItems, styles } = content.workflow;
+
   return (
-    <div className="mt-20" id="Workflow">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-        Streamline Blockchain
-        <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
+    <div className={styles.container} id="Workflow">
+      <h2 className={heading.style}>
+        {heading.mainText}
+        <span className={heading.highlightedStyle}>
           {" "}
-          Development Workflow
+          {heading.highlightedText}
         </span>
       </h2>
       <div className="flex flex-wrap justify-center">
-        <div className="p-2 w-full lg:w-1/2">
-          <img src={bitcoin} alt="" />
+        <div className={styles.imageContainer}>
+          <img src={image.src} alt={image.alt} />
         </div>
-        <div className="pt-12 w-full lg:w-1/2">
-          {checklistItems.map((item, index) => {
-            return (
-              <div className="flex mb-12" key={index}>
-                <div className="text-green-400 mx-6 bg-neutral-900 h-10 w-10 p-2 justify-center items-center rounded-full">
-                  <CheckCircle2 />
-                </div>
-                <div className="">
-                  <h5 className="mt-1 mb-2 text-xl">{item.title} </h5>
-                  <p className="text-md text-neutral-500">{item.description}</p>
-                </div>
+        <div className={styles.checklistContainer}>
+          {checklistItems.map((item, index) => (
+            <div className={styles.checklistItem} key={index}>
+              <div className={styles.iconContainer}>
+                <CheckCircle2 className={styles.icon} />
               </div>
-            );
-          })}
+              <div>
+                <h5 className={styles.title}>{item.title}</h5>
+                <p className={styles.description}>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Worklfow;
+export default Workflow;

@@ -1,51 +1,42 @@
 import { CheckCircle2 } from "lucide-react";
-import { pricingOptions } from "../constants";
+import content from "../data/content.json";
 
 const Pricing = () => {
+  const { heading, pricingOptions, styles } = content.pricing;
+
   return (
-    <div className="mt-20" id="Pricing">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide">
-        Pricing
-      </h2>
+    <div className={styles.container} id="Pricing">
+      <h2 className={heading.style}>{heading.text}</h2>
       <div className="flex flex-wrap">
-        {pricingOptions.map((item, index) => {
-          return (
-            <div className="w-full sm:w-1/2 lg:w-1/3 p-2" key={index}>
-              <div className="p-10 border border-neutral-700 rounded-xl">
-                <p className="text-4xl mb-8">
-                  {item.title}{" "}
-                  {item.title === "Pro" && (
-                    <span className="bg-gradient-to-r from-orange-500 to-red-400 text-transparent bg-clip-text text-xl mb-4 ml-2">
-                      (Most Popular)
-                    </span>
-                  )}
-                </p>
-                <p className="mb-8">
-                  <span className="text-5xl mb-6 mr-2">{item.price} </span>
-                  <span className="text-neutral-400 tracking-tight">
-                    /month
-                  </span>{" "}
-                </p>
-                <ul>
-                  {item.features.map((feature, index) => {
-                    return (
-                      <li className="mt-8 flex items-center" key={index}>
-                        <CheckCircle2 />
-                        <span className="ml-2">{feature} </span>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <a
-                  href="#"
-                  className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
-                >
-                  Suscribe
-                </a>
-              </div>
+        {pricingOptions.map((item, index) => (
+          <div className={styles.pricingOptionContainer} key={index}>
+            <div className={styles.card}>
+              <p className={styles.title}>
+                {item.title}
+                {item.title === "Developer" && (
+                  <span className={styles.mostPopularStyle}>
+                    (Most Popular)
+                  </span>
+                )}
+              </p>
+              <p className={styles.priceInfo}>
+                <span className={styles.price}>{item.price}</span>
+                <span className={styles.priceLabel}>/month</span>
+              </p>
+              <ul>
+                {item.features.map((feature, featureIndex) => (
+                  <li className={styles.featureList} key={featureIndex}>
+                    <CheckCircle2 />
+                    <span className={styles.featureIcon}>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="#" className={styles.subscribeButton}>
+                Subscribe
+              </a>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

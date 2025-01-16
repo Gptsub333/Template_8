@@ -1,0 +1,339 @@
+{
+    "navbar": {
+      "logo": {
+        "src": "public/logo.png",
+        "alt": "Logo",
+        "dimensions": {
+          "width": 40,
+          "height": 40
+        }
+      },
+      "brandName": "LedgerLink",
+      "navItems": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "buttons": {
+        "signIn": {
+          "label": "Sign In",
+          "href": "/signin",
+          "style": "border rounded-md py-2 px-3"
+        },
+        "createAccount": {
+          "label": "Create an account",
+          "href": "/signup",
+          "style": "bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
+        }
+      },
+      "mobileMenu": {
+        "menuIcon": "Menu",
+        "closeIcon": "X"
+      },
+      "styles": {
+        "container": "sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80",
+        "innerContainer": "container px-4 mx-auto relative text-sm",
+        "desktopNav": "hidden lg:flex ml-14 space-x-12",
+        "mobileNav": "fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden",
+        "menuButton": "lg:hidden md:flex flex-col justify-end",
+        "logo": "h-10 w-10 mr-2",
+        "brand": "text-xl tracking-tight"
+      }
+    },
+    "hero": {
+    "heading": {
+      "mainText": "Build with Blockchain",
+      "highlightedText": "Development Tools",
+      "highlightedStyle": "bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+    },
+    "description": "Empower your creativity and bring your blockchain app ideas to life with our intuitive development tools. Get started today and turn your vision into a decentralized reality!",
+    "buttons": {
+      "startForFree": {
+        "label": "Start for free",
+        "href": "#",
+        "style": "bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
+      },
+      "documentation": {
+        "label": "Documentation",
+        "href": "#",
+        "style": "py-2 px-3 border mx-3 rounded-md"
+      }
+    },
+    "videos": [
+      {
+        "src": "public/videos/videoHero2.mp4",
+        "type": "video/mp4",
+        "style": "rounded-lg w-1/2 border border-orange-700 shadow-orange-700 mx-2 my-4"
+      },
+      {
+        "src": "public/videos/videoHero1.mp4",
+        "type": "video/mp4",
+        "style": "rounded-lg w-1/2 border border-orange-700 shadow-orange-700 mx-2 my-4"
+      }
+    ],
+    "styles": {
+      "container": "flex flex-col items-center mt-6",
+      "heading": "text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide",
+      "description": "mt-10 text-lg text-center text-neutral-500 max-w-4xl",
+      "buttonContainer": "flex justify-center my-10",
+      "videoContainer": "flex justify-center mt-10"
+    }
+  },"features": {
+    "sectionTitle": {
+      "label": "feature",
+      "style": "bg-neutral-900 text-orange-500 rounded-full h-6 text-sm font-medium uppercase px-2 py-1"
+    },
+    "heading": {
+      "mainText": "Effortless Blockchain",
+      "highlightedText": "App Development",
+      "highlightedStyle": "bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text",
+      "style": "text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide"
+    },
+    "featureItems": [
+      {
+        "icon": "BotMessageSquare",
+        "text": "Smart Contract Builder",
+        "description": "Easily create and deploy smart contracts with a user-friendly interface designed for efficiency."
+      },
+      {
+        "icon": "Fingerprint",
+        "text": "Multi-Chain Compatibility",
+        "description": "Build blockchain applications that run seamlessly across multiple blockchain networks, including Ethereum and Binance Smart Chain."
+      },
+      {
+        "icon": "ShieldHalf",
+        "text": "Pre-Built Templates",
+        "description": "Kickstart your blockchain projects with a variety of pre-built templates for different use cases."
+      },
+      {
+        "icon": "BatteryCharging",
+        "text": "Real-Time Testing",
+        "description": "Test your blockchain application in real-time as you develop, ensuring faster debugging and iterations."
+      },
+      {
+        "icon": "PlugZap",
+        "text": "Team Collaboration",
+        "description": "Collaborate with your team in real-time on blockchain projects, enabling seamless communication and productivity."
+      },
+      {
+        "icon": "GlobeLock",
+        "text": "Integrated Analytics",
+        "description": "Track and analyze transactions, smart contract performance, and user interactions with an integrated analytics dashboard."
+      }
+    ],
+    "styles": {
+      "container": "relative mt-20 border-b border-neutral-800 mi-h-[800px]",
+      "featureContainer": "flex flex-wrap mt-10 lg:mt-20",
+      "featureItem": "w-full sm:w-1/2 lg:w-1/3",
+      "iconContainer": "flex mx-6 h-10 w-10 p-2 bg-neutral-900 text-orange-700 justify-center items-center rounded-full",
+      "icon": "h-6 w-6",
+      "text": "mt-1 mb-6 text-xl",
+      "description": "text-md p-2 mb-20 text-neutral-500"
+    }
+  },
+  "workflow": {
+    "heading": {
+      "mainText": "Streamline Blockchain",
+      "highlightedText": "Development Workflow",
+      "highlightedStyle": "bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text",
+      "style": "text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide"
+    },
+    "image": {
+      "src": "public/bitcoin.png",
+      "alt": "Bitcoin Workflow"
+    },
+    "checklistItems": [
+      {
+        "title": "Seamless Code Integration",
+        "description": "Effortlessly integrate and manage smart contracts with automated version control and conflict resolution."
+      },
+      {
+        "title": "Smart Contract Auditing",
+        "description": "Securely audit and review blockchain code for vulnerabilities, ensuring reliability before deployment."
+      },
+      {
+        "title": "AI-Driven Optimization",
+        "description": "Utilize AI to optimize blockchain performance, enhancing scalability and reducing gas fees."
+      },
+      {
+        "title": "Instant Code Deployment",
+        "description": "Deploy your smart contracts to the blockchain in minutes, with real-time collaboration and feedback."
+      }
+    ],
+    "styles": {
+      "container": "mt-20",
+      "imageContainer": "p-2 w-full lg:w-1/2",
+      "checklistContainer": "pt-12 w-full lg:w-1/2",
+      "checklistItem": "flex mb-12",
+      "iconContainer": "text-green-400 mx-6 bg-neutral-900 h-10 w-10 p-2 justify-center items-center rounded-full",
+      "icon": "h-6 w-6",
+      "title": "mt-1 mb-2 text-xl",
+      "description": "text-md text-neutral-500"
+    }
+  },"pricing": {
+    "heading": {
+      "text": "Pricing",
+      "style": "text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide"
+    },
+    "pricingOptions": [
+      {
+        "title": "Starter",
+        "price": "$0",
+        "features": [
+          "Deploy up to 3 smart contracts",
+          "5 GB Transaction History",
+          "Basic Blockchain Analytics",
+          "Testnet Access"
+        ]
+      },
+      {
+        "title": "Developer",
+        "price": "$15",
+        "features": [
+          "Deploy up to 10 smart contracts",
+          "20 GB Transaction History",
+          "Advanced Blockchain Analytics",
+          "Mainnet Access"
+        ]
+      },
+      {
+        "title": "Enterprise",
+        "price": "$500",
+        "features": [
+          "Unlimited Smart Contract Deployments",
+          "Unlimited Transaction History",
+          "Priority Blockchain Network Access",
+          "Dedicated Support & Custom Solutions"
+        ]
+      }
+    ],
+    "styles": {
+      "container": "mt-20",
+      "pricingOptionContainer": "w-full sm:w-1/2 lg:w-1/3 p-2",
+      "card": "p-10 border border-neutral-700 rounded-xl",
+      "title": "text-4xl mb-8",
+      "mostPopularStyle": "bg-gradient-to-r from-orange-500 to-red-400 text-transparent bg-clip-text text-xl mb-4 ml-2",
+      "price": "text-5xl mb-6 mr-2",
+      "priceInfo": "mb-8",
+      "priceLabel": "text-neutral-400 tracking-tight",
+      "featureList": "mt-8 flex items-center",
+      "featureIcon": "ml-2",
+      "subscribeButton": "inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
+    }
+  },"testimonials": {
+    "heading": {
+      "text": "What people are saying",
+      "style": "text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg-my-20"
+    },
+    "testimonials": [
+      {
+        "user": "Alice Williams",
+        "company": "Blockchain Enterprises",
+        "image": "public/profile-pictures/user1.jpg",
+        "text": "The blockchain tools provided exceeded our expectations. The team's expertise enabled us to deploy secure smart contracts quickly and efficiently."
+      },
+      {
+        "user": "Carlos Martinez",
+        "company": "Crypto Innovations",
+        "image": "public/profile-pictures/user2.jpg",
+        "text": "Working with this team was a game-changer for our decentralized app. Their innovative solutions and deep understanding of blockchain technology were crucial to our success."
+      },
+      {
+        "user": "Sophia Lee",
+        "company": "Chain Solutions Inc.",
+        "image": "public/profile-pictures/user3.jpg",
+        "text": "The team helped us navigate the complexities of blockchain development with ease. Their attention to security and scalability set us up for long-term success."
+      },
+      {
+        "user": "James Cooper",
+        "company": "DeFi Labs",
+        "image": "public/profile-pictures/user4.jpg",
+        "text": "We partnered with the team to build our blockchain platform, and they delivered outstanding results. Their technical expertise and commitment to quality are unparalleled."
+      },
+      {
+        "user": "Olivia Harris",
+        "company": "SmartChain Technologies",
+        "image": "public/profile-pictures/user5.jpg",
+        "text": "I am thoroughly impressed by the blockchain solutions the team delivered. They made deploying our smart contracts straightforward and secure. I highly recommend them."
+      },
+      {
+        "user": "Ethan Clark",
+        "company": "Ledger Innovations",
+        "image": "public/profile-pictures/user6.jpg",
+        "text": "From start to finish, the team was professional, knowledgeable, and dedicated. Thanks to their work, our blockchain project is now running smoothly and securely."
+      }
+    ],
+    "styles": {
+      "container": "mt-20 tracking-wide",
+      "testimonialContainer": "flex flex-wrap justify-center",
+      "testimonialItem": "w-full sm:w-1/2 lg:w-1/3 px-4 py-2",
+      "card": "bg-neutral-900 rounded-md p-6 text-md border border-neutral-800 font-thin",
+      "text": "",
+      "profileContainer": "flex mt-8 items-start",
+      "profileImage": "w-12 h-12 mr-6 rounded-full border border-neutral-300",
+      "userName": "",
+      "companyName": "text-sm font-normal italic text-neutral-600"
+    }
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "Platform",
+        "links": [
+          { "href": "#", "text": "Features" },
+          { "href": "#", "text": "Supported Devices" },
+          { "href": "#", "text": "System Requirements" },
+          { "href": "#", "text": "Downloads" },
+          { "href": "#", "text": "Release Notes" }
+        ]
+      },
+      {
+        "title": "Community",
+        "links": [
+          { "href": "#", "text": "Events" },
+          { "href": "#", "text": "Meetups" },
+          { "href": "#", "text": "Conferences" },
+          { "href": "#", "text": "Hackathons" },
+          { "href": "#", "text": "Jobs" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "href": "#", "text": "Getting Started" },
+          { "href": "#", "text": "Documentation" },
+          { "href": "#", "text": "Tutorials" },
+          { "href": "#", "text": "API Reference" },
+          { "href": "#", "text": "Community Forums" }
+        ]
+      }
+    ],
+    "copyright": {
+      "text": "Copyright 2024, Oumarou Sanda Souley",
+      "style": "text-center text-xl text-neutral-700"
+    },
+    "styles": {
+      "container": "border-t mt-20 py-10 border-neutral-700",
+      "grid": "grid grid-cols-2 lg:grid-cols-3 gap-4",
+      "section": "",
+      "title": "text-md font-semibold mb-4",
+      "list": "space-y-2",
+      "link": "text-neutral-300 hover:text-white",
+      "copyrightContainer": "mt-6 justify-center text-center"
+    }
+  }
+  }
+  

@@ -1,66 +1,29 @@
 import React from "react";
-import { communityLinks, platformLinks, resourcesLinks } from "../constants";
+import content from "../data/content.json";
 
 const Footer = () => {
+  const { sections, copyright, styles } = content.footer;
+
   return (
-    <footer className="border-t mt-20 py-10 border-neutral-700">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="">
-          <h3 className="text-md font-semibold mb-4">Platform</h3>
-          <ul className="space-y-2">
-            {platformLinks.map((ressource, index) => {
-              return (
-                <li className="" key={index}>
-                  <a
-                    href={ressource.href}
-                    className="text-neutral-300 hover:text-white"
-                  >
-                    {ressource.text}{" "}
+    <footer className={styles.container}>
+      <div className={styles.grid}>
+        {sections.map((section, index) => (
+          <div className={styles.section} key={index}>
+            <h3 className={styles.title}>{section.title}</h3>
+            <ul className={styles.list}>
+              {section.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a href={link.href} className={styles.link}>
+                    {link.text}
                   </a>
                 </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="">
-          <h3 className="text-md font-semibold mb-4">Community</h3>
-          <ul className="space-y-2">
-            {communityLinks.map((ressource, index) => {
-              return (
-                <li className="" key={index}>
-                  <a
-                    href={ressource.href}
-                    className="text-neutral-300 hover:text-white"
-                  >
-                    {ressource.text}{" "}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="">
-          <h3 className="text-md font-semibold mb-4">Ressources</h3>
-          <ul className="space-y-2">
-            {resourcesLinks.map((ressource, index) => {
-              return (
-                <li className="" key={index}>
-                  <a
-                    href={ressource.href}
-                    className="text-neutral-300 hover:text-white"
-                  >
-                    {ressource.text}{" "}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-      <div className="mt-6 justify-center text-center">
-        <h5 className="text-center text-xl text-neutral-700">
-          Copyright 2024, Oumarou Sanda Souley
-        </h5>
+      <div className={styles.copyrightContainer}>
+        <h5 className={copyright.style}>{copyright.text}</h5>
       </div>
     </footer>
   );

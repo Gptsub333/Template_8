@@ -1,37 +1,50 @@
-import { features } from "../constants";
+import content from "../data/content.json";
+import {
+  BotMessageSquare,
+  Fingerprint,
+  ShieldHalf,
+  BatteryCharging,
+  PlugZap,
+  GlobeLock,
+} from "lucide-react";
 
 const Features = () => {
+  const { sectionTitle, heading, featureItems, styles } = content.features;
+
+  // Map icons to their respective components
+  const iconComponents = {
+    BotMessageSquare,
+    Fingerprint,
+    ShieldHalf,
+    BatteryCharging,
+    PlugZap,
+    GlobeLock,
+  };
+
   return (
-    <div
-      className="relative mt-20 border-b border-neutral-800 mi-h-[800px]"
-      id="Features"
-    >
+    <div className={styles.container} id="Features">
       <div className="text-center">
-        <span className="bg-neutral-900 text-orange-500 rounded-full h-6 text-sm font-medium uppercase px-2 py-1">
-          feature
-        </span>
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
-          Effortless Blockchain
-          <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
+        <span className={sectionTitle.style}>{sectionTitle.label}</span>
+        <h2 className={heading.style}>
+          {heading.mainText}
+          <span className={heading.highlightedStyle}>
             {" "}
-            App Development
-          </span>{" "}
+            {heading.highlightedText}
+          </span>
         </h2>
       </div>
-      <div className="flex flex-wrap mt-10 lg:mt-20">
-        {features.map((item, index) => {
-          const IconComponent = item.icon;
+      <div className={styles.featureContainer}>
+        {featureItems.map((item, index) => {
+          const IconComponent = iconComponents[item.icon];
           return (
-            <div className="w-full sm:w-1/2 lg:w-1/3" key={index}>
+            <div className={styles.featureItem} key={index}>
               <div className="flex">
-                <div className="flex mx-6 h-10 w-10 p-2 bg-neutral-900 text-orange-700 justify-center items-center rounded-full">
-                  <IconComponent className="h-6 w-6" />
+                <div className={styles.iconContainer}>
+                  <IconComponent className={styles.icon} />
                 </div>
-                <div className="">
-                  <h5 className="mt-1 mb-6 text-xl">{item.text} </h5>
-                  <p className="text-md p-2 mb-20 text-neutral-500">
-                    {item.description}{" "}
-                  </p>
+                <div>
+                  <h5 className={styles.text}>{item.text}</h5>
+                  <p className={styles.description}>{item.description}</p>
                 </div>
               </div>
             </div>
